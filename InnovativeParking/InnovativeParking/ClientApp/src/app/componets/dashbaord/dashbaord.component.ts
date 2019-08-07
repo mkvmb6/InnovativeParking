@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashbaordComponent implements OnInit {
 
-  constructor() { }
+  currentDate: number;
+  currentTime: any;
+
+  constructor() {
+
+    this.currentDate = Date.now();
+    this.currentTime = new Date().getHours() + ':' + new Date().getMinutes();
+  }
 
   ngOnInit() {
   }
+
+  
 
 }
