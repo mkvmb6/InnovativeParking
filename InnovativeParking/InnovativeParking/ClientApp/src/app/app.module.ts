@@ -13,6 +13,8 @@ import { RequestComponent } from './componets/request/request.component';
 import { DashbaordComponent } from './componets/dashbaord/dashbaord.component';
 import { ReleaseComponent } from './componets/release/release.component';
 import { AdminComponent } from './componets/admin/admin.component';
+import { LoginComponent } from './componets/login/login.component';
+import { CommonComponent } from './componets/common/common.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AdminComponent } from './componets/admin/admin.component';
     RequestComponent,
     DashbaordComponent,
     ReleaseComponent,
-    AdminComponent
+    AdminComponent,
+    LoginComponent,
+    CommonComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -36,6 +40,8 @@ import { AdminComponent } from './componets/admin/admin.component';
       { path: 'request', component: RequestComponent },
       { path: 'release', component: ReleaseComponent },
       { path: 'admin', component: AdminComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'common', component: CommonComponent },
     ])
   ],
   providers: [],
