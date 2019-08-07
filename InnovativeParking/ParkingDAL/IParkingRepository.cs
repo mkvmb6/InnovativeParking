@@ -14,5 +14,7 @@ namespace ParkingDAL
         int AddParkingRequest(int empId, DateTime requestDateTime);
 
         int ReleaseParkingSpot(int empId);
+
+        List<dynamic> AllotParking();
     }
 }

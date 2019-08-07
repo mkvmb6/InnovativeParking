@@ -31,5 +31,50 @@ namespace ParkingAPI.Controllers
         {
             return _parkingRepository.ReleaseParkingSpot(empId);
         }
+
+        [HttpGet]
+        public IHttpActionResult RunLottery()
+        {
+            List<dynamic> result = _parkingRepository.AllotParking();
+
+            dynamic ptempList = result[0];
+            dynamic etempList = result[1];
+
+            List<ParkingEntity> pList = new List<ParkingEntity>();
+            foreach (dynamic p in ptempList)
+            {
+                ParkingEntity pen = new ParkingEntity();
+                pen.PID = p.ParkingSlotID;
+                pen.Wing = p.ParkingSlotWing;
+
+                pList.Add(pen);
+            }
+
+            List<EmployeeEntity> eList = new List<EmployeeEntity>();
+            foreach (dynamic e in etempList)
+            {
+                EmployeeEntity een = new EmployeeEntity();
+                een.Id = e.EmployeeID;
+                een.RoleTitle = e.RoleTitle;
+
+                eList.Add(een);
+            }
+
+            if (pList.Count > eList.Count)
+            {
+                //assign parking slot to each employee randomly
+
+            }
+            else
+            {
+                //assign parking slot for random employee
+            }
+        }
+
+        public class ParkingEntity
+        {
+            public int PID;
+            public string Wing;
+        }
     }
 }
