@@ -10,5 +10,9 @@ namespace ParkingDAL
     public interface IParkingRepository
     {
         EmployeeEntity IsUserAuthenticted(string userName, string passWord);
+
+        int AddParkingRequest(int empId, DateTime requestDateTime);
+
+        int ReleaseParkingSpot(int empId);
     }
 }

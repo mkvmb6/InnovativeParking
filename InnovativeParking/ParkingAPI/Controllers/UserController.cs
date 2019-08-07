@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using ParkingDAL;
 using ParkingEntity;
-using Dapper;
+using Newtonsoft;
 
 namespace ParkingAPI.Controllers
 {
@@ -19,9 +19,9 @@ namespace ParkingAPI.Controllers
         }
 
         [HttpGet]
-        public EmployeeEntity IsUserAuthenticated(string userName, string passWord)
+        public string IsUserAuthenticated(string userName, string passWord)
         {
-            return _parkingRepository.IsUserAuthenticted(userName, passWord);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(_parkingRepository.IsUserAuthenticted(userName, passWord));
             
         }
     }

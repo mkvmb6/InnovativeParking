@@ -10,5 +10,6 @@ namespace ParkingEntity
     {
         public int Id;
         public string EmpName;
+        public string RoleTitle;
     }
 }
