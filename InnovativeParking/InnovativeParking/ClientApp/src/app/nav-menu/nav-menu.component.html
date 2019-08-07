@@ -14,17 +14,17 @@
             <ul class='nav navbar-nav'>
                 <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
                     <a [routerLink]='["/"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-home'></span> Spot Request
+                        <span class='glyphicon glyphicon-home'></span> Dashboard
                     </a>
                 </li>
                 <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/counter"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-education'></span> Release Spot
+                    <a [routerLink]='["/request"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-education'></span> Spot Request
                     </a>
                 </li>
                 <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                    <a [routerLink]='["/release"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-th-list'></span> Release Spot
                     </a>
                 </li>
             </ul>
