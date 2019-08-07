@@ -15,6 +15,7 @@ import { ReleaseComponent } from './componets/release/release.component';
 import { AdminComponent } from './componets/admin/admin.component';
 import { LoginComponent } from './componets/login/login.component';
 import { CommonComponent } from './componets/common/common.component';
+import { AuthenticationService } from './services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { CommonComponent } from './componets/common/common.component';
       { path: 'common', component: CommonComponent },
     ])
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

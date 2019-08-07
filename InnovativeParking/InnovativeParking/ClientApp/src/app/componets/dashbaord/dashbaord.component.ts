@@ -12,11 +12,11 @@ export class DashbaordComponent implements OnInit {
 
   constructor() {
 
-    this.currentDate = Date.now();
-    this.currentTime = new Date().getHours() + ':' + new Date().getMinutes();
   }
 
   ngOnInit() {
+    this.currentDate = Date.now();
+    this.currentTime = (new Date().getHours() > 13) ? 15 : 13 + ':00';
   }
 
   
