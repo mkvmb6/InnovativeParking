@@ -18,13 +18,15 @@ namespace ParkingAPI.Controllers
             _parkingRepository = new ParkingRepository();
         }
 
-        [HttpPut]
+        [Route("api/parkingtransaction/addparkingrequest")]
+        [HttpPost, HttpGet]
         public int AddParkingRequest(int empId)
         {
             return _parkingRepository.AddParkingRequest(empId, DateTime.Now);
         }
 
-        [HttpPut]
+        [Route("api/parkingtransaction/releaseparkingspot")]
+        [HttpPost, HttpGet]
         public int ReleaseParkingSpot(int empId)
         {
             return _parkingRepository.ReleaseParkingSpot(empId);

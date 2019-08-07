@@ -18,7 +18,7 @@ namespace ParkingAPI.Controllers
             _parkingRepository = new ParkingRepository();
         }
 
-        [HttpGet]
+        [HttpPost, HttpGet]
         public string IsUserAuthenticated(string userName, string passWord)
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(_parkingRepository.IsUserAuthenticted(userName, passWord));
