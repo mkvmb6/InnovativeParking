@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { RequestComponent } from './componets/request/request.component';
 import { DashbaordComponent } from './componets/dashbaord/dashbaord.component';
 import { ReleaseComponent } from './componets/release/release.component';
+import { AdminComponent } from './componets/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReleaseComponent } from './componets/release/release.component';
     FetchDataComponent,
     RequestComponent,
     DashbaordComponent,
-    ReleaseComponent
+    ReleaseComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,6 +35,7 @@ import { ReleaseComponent } from './componets/release/release.component';
       { path: 'dashboard', component: DashbaordComponent },
       { path: 'request', component: RequestComponent },
       { path: 'release', component: ReleaseComponent },
+      { path: 'admin', component: AdminComponent },
     ])
   ],
   providers: [],
