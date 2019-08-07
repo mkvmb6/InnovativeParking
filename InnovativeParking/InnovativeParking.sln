@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnovativeParking", "InnovativeParking\InnovativeParking.csproj", "{1DD1A1D0-9A9E-49CC-AA4B-622FCDE6C5E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InnovativeParking", "InnovativeParking\InnovativeParking.csproj", "{1DD1A1D0-9A9E-49CC-AA4B-622FCDE6C5E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingAPI", "ParkingAPI\ParkingAPI.csproj", "{C33A3F88-B1BD-4AE9-8C91-4D5E3B7545FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingEntity", "ParkingEntity\ParkingEntity.csproj", "{66FAB15D-34BC-4E50-84C6-4D44D2A84D10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingDAL", "ParkingDAL\ParkingDAL.csproj", "{0ECB39E9-9030-4F35-AEC5-45FEF9FE5AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingService", "ParkingService\ParkingService.csproj", "{43815E86-0376-4D2F-9A58-D8307D1C47E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{1DD1A1D0-9A9E-49CC-AA4B-622FCDE6C5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DD1A1D0-9A9E-49CC-AA4B-622FCDE6C5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DD1A1D0-9A9E-49CC-AA4B-622FCDE6C5E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33A3F88-B1BD-4AE9-8C91-4D5E3B7545FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33A3F88-B1BD-4AE9-8C91-4D5E3B7545FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33A3F88-B1BD-4AE9-8C91-4D5E3B7545FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33A3F88-B1BD-4AE9-8C91-4D5E3B7545FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66FAB15D-34BC-4E50-84C6-4D44D2A84D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66FAB15D-34BC-4E50-84C6-4D44D2A84D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66FAB15D-34BC-4E50-84C6-4D44D2A84D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66FAB15D-34BC-4E50-84C6-4D44D2A84D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ECB39E9-9030-4F35-AEC5-45FEF9FE5AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECB39E9-9030-4F35-AEC5-45FEF9FE5AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECB39E9-9030-4F35-AEC5-45FEF9FE5AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECB39E9-9030-4F35-AEC5-45FEF9FE5AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43815E86-0376-4D2F-9A58-D8307D1C47E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43815E86-0376-4D2F-9A58-D8307D1C47E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43815E86-0376-4D2F-9A58-D8307D1C47E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43815E86-0376-4D2F-9A58-D8307D1C47E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
