@@ -69,6 +69,7 @@ namespace ParkingAPI.Controllers
             {
                 //assign parking slot for random employee
             }
+            return Ok();
         }
 
         public class ParkingEntity
