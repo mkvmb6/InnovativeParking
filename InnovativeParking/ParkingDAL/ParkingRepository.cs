@@ -52,9 +52,26 @@ namespace ParkingDAL
         }
 
 
-        public void AllotParking()
+        public List<dynamic> AllotParking()
         {
+            List<dynamic> myList = new List<dynamic>();
+            string query = @"select * from MasterParkingSlots where ParkingSlotID NOT IN(
+                                select ParkingSlotID from MasterReservedSlots
+                                UNION
+                                select ParkingSlotID from TranParking 
+                                    where Cast(DateAllotted as date)= cast(GETDATE() + 1 as date))
+                            UNION
+                            (select p.* from Release r inner join MasterParkingSlots p 
+                            on r.ParkingSlotID = p.ParkingSlotID
+                            where Cast(ReleaseDate as date) = cast(GETDATE() + 1 as date))";
+            string sqlCommand = @"select e.EmployeeID, Year(e.EmployeeDOJ)-Year(GetDate()) as Experience 
+                                from ParkingRequest r inner join MasterEmployee e
+                                on r.EmployeeID=e.EmployeeID";
 
+            myList.Add(_sqlAdapter.Query(query));
+            myList.Add(_sqlAdapter.Query(sqlCommand));
+
+            return myList;
         }
     }
 }
