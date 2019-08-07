@@ -29,10 +29,10 @@ import { ReleaseComponent } from './componets/release/release.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
+      { path: '', component: DashbaordComponent, pathMatch: 'full' },
+      { path: 'dashboard', component: DashbaordComponent },
       { path: 'request', component: RequestComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'release', component: ReleaseComponent },
     ])
   ],
   providers: [],
